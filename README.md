@@ -1,2 +1,2 @@
 # CMD-Linux
-Command for operation Linux by me 
+Command for operation Linux 
