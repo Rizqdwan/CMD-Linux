@@ -1,0 +1,16 @@
+~> cara connected ftp di CMD
+
+ftp <ip_server>
+
+ex:
+
+ftp 10.0.0.5
+
+
+~> cara connect kembali setelah timeout / connection closed by remote host
+
+open <ip_server>
+
+ex:
+
+open 10.0.0.5
