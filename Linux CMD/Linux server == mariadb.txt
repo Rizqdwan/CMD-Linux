@@ -1,18 +1,18 @@
 ~> hapus database
 
-DROP DATABASE <name>;
+  DROP DATABASE <name>;
 
 
 ~> hapus user database
 
-DROP USER '<name>'@'localhost';
-
+  DROP USER '<name>'@'localhost';
+ 
 
 ~> hapus table 
 
-DROP TABLE <name>;
+  DROP TABLE <name>;
 
 ~> hapus row table
 
-DELETE FROM <name>
-  -> WHERE id= <number id>;
+  DELETE FROM <name>
+    -> WHERE id= <number id>;
