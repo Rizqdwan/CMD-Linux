@@ -38,7 +38,7 @@
 
    sudo netplan apply
 
-~> Me restart interface renderer systemd-networkd
+~> Merestart interface renderer systemd-networkd
 
    sudo ip link set enp0s3 down
    sudo ip link set enp0s3 up
