@@ -1,6 +1,6 @@
 ~> mengecek route
 
-ip route
+   ip route
 
 ~> Mengecek renderer :
 
@@ -8,7 +8,7 @@ ip route
  
    sudo services systemd-networkd status
 
-* jika informasi "Active: active (running)" maka systemd-networkd sudah berjalan
+*jika informasi "Active: active (running)" maka systemd-networkd sudah berjalan
 
 ~> Mengecek lokasi file konfigurasi Netplan
 
@@ -18,7 +18,7 @@ ip route
 
    cat /etc/cloud/cloud.efg.d/subiquity-disable-cloudinit-networking.cfg
 
-* pastikan "network : {config: disabel}" ip
+*pastikan "network : {config: disabel}" ip
 
 ~> Mengecek ip
 
@@ -43,7 +43,7 @@ ip route
    sudo ip link set enp0s3 down
    sudo ip link set enp0s3 up
 
-* jika ada enp0s8 
+*jika ada enp0s8 
 
    sudo ip link set enp0s8 down
    sudo ip link set enp0s8 up
@@ -62,14 +62,26 @@ ip route
 
   iptables –t nat -L 
 
-> Untuk membuat Ip Masquerading permanen
+~> Untuk membuat Ip Masquerading permanen
 
-  sudo nano /etc/rc.local
+*cara mengedit rc.local
 
-  *masukkan code
+      sudo nano /etc/rc.local
+      
+*jika sudah root maka tidak perlu sudo didepan
 
-  #!/bin/sh -e
-  iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
-  iptables -A FORWARD -i enpos3 -o enp0s8 -m state --state RELATED,ESTABLISHED -j ACCEPT
-  iptables -A FORWARD -i enpos8 -o enpos3 -j ACCEPT
-  exit 0
+      nano /etc/rc.local
+  
+*sebelum masukkan code pastikan status rc.local ( Active )
+  
+*cara cek status rc.local
+  
+      systemctl status rc-local
+
+*masukkan code
+
+      #!/bin/sh -e
+      iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
+      iptables -A FORWARD -i enpos3 -o enp0s8 -m state --state RELATED,ESTABLISHED -j ACCEPT
+      iptables -A FORWARD -i enpos8 -o enpos3 -j ACCEPT
+      exit 0
