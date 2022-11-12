@@ -1,4 +1,4 @@
-~> cara connected ftp di CMD
+~> !cara connected ftp di CMD!
 
 ftp <ip_server>
 
@@ -14,3 +14,8 @@ open <ip_server>
 example:
 
 open 10.0.0.5
+
+
+~> cara melihat daftar semua perintah FTP 
+
+
