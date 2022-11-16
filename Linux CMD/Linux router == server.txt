@@ -73,6 +73,10 @@
       nano /etc/rc.local
   
 *sebelum masukkan code pastikan status rc.local ( Active )
+
+*cara mengaktifkan rc.local
+
+https://linuxhint.com/use-etc-rc-local-boot/
   
 *cara cek status rc.local
   
