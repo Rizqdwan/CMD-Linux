@@ -8,7 +8,7 @@
  
     sudo services systemd-networkd status
 
-   *-jika informasi "Active: active (running)" maka systemd-networkd sudah berjalan*
+   *- jika informasi "Active: active (running)" maka systemd-networkd sudah berjalan*
 
 ~> Mengecek lokasi file konfigurasi Netplan
 
@@ -18,7 +18,7 @@
 
     cat /etc/cloud/cloud.efg.d/subiquity-disable-cloudinit-networking.cfg
 
-   *-pastikan "network : {config: disabel}" ip*
+   *- pastikan "network : {config: disabel}" ip*
 
 ~> Mengecek ip
 
@@ -43,7 +43,7 @@
     sudo ip link set enp0s3 down
     sudo ip link set enp0s3 up
 
-   *-jika ada enp0s8*
+   *- jika ada enp0s8*
 
     sudo ip link set enp0s8 down
     sudo ip link set enp0s8 up
@@ -64,25 +64,25 @@
 
 ~> Untuk membuat Ip Masquerading permanen
 
-   *-cara mengedit rc.local*
+   *- cara mengedit rc.local*
 
       sudo nano /etc/rc.local
       
-   *-jika sudah root maka tidak perlu sudo didepan*
+   *- jika sudah root maka tidak perlu sudo didepan*
 
       nano /etc/rc.local
   
-   *-sebelum masukkan code pastikan status rc.local ( Active )*
+   *- sebelum masukkan code pastikan status rc.local ( Active )*
 
-   *-cara mengaktifkan rc.local*
+   *- cara mengaktifkan rc.local*
 
      https://linuxhint.com/use-etc-rc-local-boot/
   
-   *-cara cek status rc.local*
+   *- cara cek status rc.local*
   
       systemctl status rc-local
 
-   *-masukkan code*
+   *- masukkan code*
 
       #!/bin/sh -e
       iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
