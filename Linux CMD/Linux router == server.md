@@ -1,70 +1,70 @@
 ~> mengecek route
 
-   ip route
+    ip route
 
 ~> Mengecek renderer :
 
-   pidof systemd && echo "systemd" || echo "other"
+    pidof systemd && echo "systemd" || echo "other"
  
-   sudo services systemd-networkd status
+    sudo services systemd-networkd status
 
-*jika informasi "Active: active (running)" maka systemd-networkd sudah berjalan
+*jika informasi "Active: active (running)" maka systemd-networkd sudah berjalan*
 
 ~> Mengecek lokasi file konfigurasi Netplan
 
-   ls /etc/netplan
+    ls /etc/netplan
 
 ~> Mengecek pengaturan cloud-init
 
-   cat /etc/cloud/cloud.efg.d/subiquity-disable-cloudinit-networking.cfg
+    cat /etc/cloud/cloud.efg.d/subiquity-disable-cloudinit-networking.cfg
 
 *pastikan "network : {config: disabel}" ip
 
 ~> Mengecek ip
 
-   ip add show
+    ip add show
 
 ~> Mengedit file konfigurasi Netplan
 
-   sudo nano /etc/netplan/00-installer-config.yaml
+    sudo nano /etc/netplan/00-installer-config.yaml
 
 ~> Mengecek error konfigurasi Netplan
 
-   sudo netplan generate
+    sudo netplan generate
 
-   sudo netplan try
+    sudo netplan try
 
 ~> Menyetujui perubahan konfigurasi Netplan
 
-   sudo netplan apply
+    sudo netplan apply
 
 ~> Merestart interface renderer systemd-networkd
 
-   sudo ip link set enp0s3 down
-   sudo ip link set enp0s3 up
+    sudo ip link set enp0s3 down
+    sudo ip link set enp0s3 up
 
-*jika ada enp0s8 
+*jika ada enp0s8*
 
-   sudo ip link set enp0s8 down
-   sudo ip link set enp0s8 up
+    sudo ip link set enp0s8 down
+    sudo ip link set enp0s8 up
 
 ~> Untuk me reboot ubuntu
 
-   sudo reboot
+    sudo reboot
 
 ~> Menyetting Ip Masquerading
 
-  echo 1 > /proc/sys/net/ipv4/ip_forward
+    echo 1 > /proc/sys/net/ipv4/ip_forward
 
-  iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
+    iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
 
-  iptables -A FORWARD -i enp0s3 -o enp0s8 -m state --state RELATED,ESTABLISHED -j ACCEPT
+    iptables -A FORWARD -i enp0s3 -o enp0s8 -m state --state RELATED,ESTABLISHED -j ACCEPT
 
-  iptables –t nat -L 
+    iptables –t nat -L 
 
 ~> Untuk membuat Ip Masquerading permanen
 
-*cara mengedit rc.local
+*cara mengedit rc.local*
 
       sudo nano /etc/rc.local
       
