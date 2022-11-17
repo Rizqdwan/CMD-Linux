@@ -18,7 +18,7 @@
 
     cat /etc/cloud/cloud.efg.d/subiquity-disable-cloudinit-networking.cfg
 
-*pastikan "network : {config: disabel}" ip
+*pastikan "network : {config: disabel}" ip*
 
 ~> Mengecek ip
 
@@ -68,21 +68,21 @@
 
       sudo nano /etc/rc.local
       
-*jika sudah root maka tidak perlu sudo didepan
+*jika sudah root maka tidak perlu sudo didepan*
 
       nano /etc/rc.local
   
-*sebelum masukkan code pastikan status rc.local ( Active )
+*sebelum masukkan code pastikan status rc.local ( Active )*
 
-*cara mengaktifkan rc.local
+*cara mengaktifkan rc.local*
 
 https://linuxhint.com/use-etc-rc-local-boot/
   
-*cara cek status rc.local
+*cara cek status rc.local*
   
       systemctl status rc-local
 
-*masukkan code
+*masukkan code*
 
       #!/bin/sh -e
       iptables -t nat -A POSTROUTING -o enp0s3 -j MASQUERADE
