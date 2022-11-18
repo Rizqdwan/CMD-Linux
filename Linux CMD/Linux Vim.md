@@ -1,12 +1,3 @@
-<h2> Download PuTTY</h2>
-
- <kbd><strong>https://www.putty.org/</strong></kbd>
- 
- <h2>PuTTY Interface</h2>
-
- <kbd><strong><img src=https://cdn.discordapp.com/attachments/515414857453928449/1042996560146993252/Screenshot_2022-11-18_095507.png></strong></kbd>
-
-
 <h2>Commands to save changes in vim</h2>
 <p>The procedure is as follows to save a file in Vim and quit the editor:</p>
 <ol>
