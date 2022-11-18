@@ -1,8 +1,10 @@
 <h2> Download PuTTY</h2>
 
  <kbd><strong>https://www.putty.org/</strong></kbd>
+ 
+ <h2>PuTTY Interface</h2>
 
-<img src=https://cdn.discordapp.com/attachments/515414857453928449/1042996560146993252/Screenshot_2022-11-18_095507.png>
+ <kbd><strong><img src=https://cdn.discordapp.com/attachments/515414857453928449/1042996560146993252/Screenshot_2022-11-18_095507.png></strong></kbd>
 
 
 <h2>Commands to save changes in vim</h2>
@@ -19,4 +21,4 @@
 
 **For more information about Vim check this link**
 
-    https://www.cyberciti.biz/faq/how-do-i-save-changes-in-vim/#:~:text=Press%20Esc%20key%20and%20type,file%20and%20exit%20from%20vim
+  <kbd><strong>https://www.cyberciti.biz/faq/how-do-i-save-changes-in-vim/#:~:text=Press%20Esc%20key%20and%20type,file%20and%20exit%20from%20vim</strong></kbd>
