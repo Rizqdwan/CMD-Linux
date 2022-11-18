@@ -30,9 +30,9 @@ example:
     cd
     
   
-~> untuk mengubah direktori pada mesin local atau LSD (Local Change Directory)
+~> untuk mengubah direktori pada mesin local atau LCD (Local Change Directory)
 
-    lsd
+    lcd
     
 
 ~> untuk melihat daftar nama file dan direktori di direktori jarak jauh
