@@ -2,7 +2,7 @@
 
  <kbd><strong>https://www.putty.org/</strong></kbd>
 
-
+<img src=https://cdn.discordapp.com/attachments/515414857453928449/1042996560146993252/Screenshot_2022-11-18_095507.png>
 
 
 <h2>Commands to save changes in vim</h2>
