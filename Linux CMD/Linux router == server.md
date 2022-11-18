@@ -74,9 +74,9 @@
   
    *- sebelum masukkan code pastikan status rc.local ( Active )*
 
-   *- cara mengaktifkan rc.local*
+   *- cara mengaktifkan rc.local (buka link dibawah)*
 
-     https://linuxhint.com/use-etc-rc-local-boot/
+      https://linuxhint.com/use-etc-rc-local-boot/
   
    *- cara cek status rc.local*
   
