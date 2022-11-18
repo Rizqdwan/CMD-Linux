@@ -1,3 +1,10 @@
+<h2> Download PuTTY</h2>
+
+ <kbd><strong>https://www.putty.org/</strong></kbd>
+
+
+
+
 <h2>Commands to save changes in vim</h2>
 <p>The procedure is as follows to save a file in Vim and quit the editor:</p>
 <ol>
