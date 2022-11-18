@@ -6,7 +6,7 @@
 
  <kbd><strong><img src=https://cdn.discordapp.com/attachments/515414857453928449/1042996560146993252/Screenshot_2022-11-18_095507.png></strong></kbd>
  
-<li>Masukkan ip server anda</li>
+<li>Masukkan ip server atau ip yang ingin diremote</li>
 <li>click Open</li>
 <li>Login dengan username dan pass server anda</li>
 
